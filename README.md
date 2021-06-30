@@ -18,7 +18,7 @@ Each docking case is named after the PDB code of the raw bound TCR-pMHC structur
 |2CKB  <sup>*</sup> <sup>‡</sup> | 1TCR | 1LEG | I | 1.17 | 0.45 | medium |
 |2IAM  <sup>*</sup> | 2IAL | 1KLG | II | 0.87 | 0.24 | rigid |
 |2IAN  <sup>*</sup> | 2IAL | 1KLU | II | 0.82 | 0.3 | rigid |
-|2NX5  <sup>*</sup> <sup>†</sup> | 2NW2 | 1ZSD | I | 1.19 | 0.37 | rigid |
+|2NX5  <sup>*</sup> <sup>†</sup> | 2NW2 | 1ZSD | I | 1.16 | 0.38 | rigid |
 |2OI9  <sup>*</sup> | 1TCR | 3ERY | I | 1.1 | 0.41 | medium |
 |2PXY  <sup>*</sup> | 2Z35 | 1K2D | II | 1.18 | 0.55 | medium |
 |2PYE  <sup>*</sup> | 2PYF | 1S9W | I | 0.88 | 0.3 | rigid |
