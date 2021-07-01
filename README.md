@@ -2,11 +2,13 @@
 
 T cell receptors (TCRs) play a crucial role in the adaptive immune system. They are responsible for recognising antigenic peptides presented at the surface of infected cells by major histocompatibility complex (MHC) molecules, and triggering downstream immune responses to fight off disease.
 
-This repository contains structural data of TCRs and pMHC complexes crystallised in bound and unbound form, serving as a set of benchmark test cases for computational docking tools. This dataset contains the 30 TCR-pMHC docking cases present in the [original TCR benchmark](https://tcr3d.ibbr.umd.edu/unbbou), as well as 14 new cases identified in the [STCRDab](http://opig.stats.ox.ac.uk/webapps/stcrdab/) and [Protein Databank](https://www.rcsb.org/) databases.
+This repository contains structural data of TCRs and pMHC complexes crystallised in bound and unbound form, serving as a set of benchmark test cases for computational docking tools. This dataset contains the 30 TCR-pMHC docking cases present in the [original TCR benchmark](https://tcr3d.ibbr.umd.edu/unbbou), as well as 14 new cases identified in the [STCRDab](http://opig.stats.ox.ac.uk/webapps/stcrdab/) and [Protein Databank](https://www.rcsb.org/) databases. This data was curated for work described in [Peacock and Chain (2021)](https://doi.org/10.3389/fimmu.2021.686127). 
 
-Structures in the `imgt` folder have been preprocessed. Solvent and heteroatoms have been removed, as have disordered atoms. Residues with non-standard names in PDB format have been updated to their standard equivalents. Raw data that contained multiple co-crystalised protein structures has been reduced such that only one appears in each PDB file. Structures with missing atoms or residues at the binding interface were repaired using [Modeller](https://salilab.org/modeller/). TCRs in both the unbound and bound files have been re-numbered according to the IMGT numbering scheme. TCR chains have been relabelled with the IDs `D` and `E`, MHC chains with IDs `A` and `B`, and peptide chains with ID `C`. The position and orientation of each structure has been randomised.
+Structures in the `raw` folder contain structural data as stored in the [Protein Databank](https://www.rcsb.org/). Original names for these PDB structures can be found in the table below.
 
-Each docking case is named after the PDB code of the raw bound TCR-pMHC structure. Bound TCR-pMHC structures contain the suffix `_b.pdb`, unbound TCRs contain the suffix `_r_u.pdb` (where `r` stands for "receptor", and `u` stands for "unbound") and  unbound pMHCs contain the suffix `_l_u.pdb` (where `l` stands for "ligand", and `u` stands for "unbound"). Corresponding codes for the unbound TCR and unbound pMHC structures can be found in the table below.
+Structures in the `imgt` folder have been preprocessed. Solvent and heteroatoms have been removed, as have disordered atoms. Residues with non-standard names in PDB format have been updated to their standard equivalents. Raw data that contained multiple co-crystalised protein structures has been reduced such that only one appears in each PDB file. Structures with missing atoms or residues at the binding interface were repaired using [Modeller](https://salilab.org/modeller/) using a protocol described in the [Modeller-Repair](https://github.com/innate2adaptive/Modeller-Repair) repository. TCRs in both the unbound and bound files have been re-numbered according to the IMGT numbering scheme. TCR chains have been relabelled with the IDs `D` and `E`, MHC chains with IDs `A` and `B`, and peptide chains with ID `C`. The position and orientation of each structure has been randomised.
+
+Each docking case is named after the PDB code of the raw bound TCR-pMHC structure. Bound TCR-pMHC structures contain the suffix `_b.pdb`, unbound TCRs contain the suffix `_r_u.pdb` (where `r` stands for "receptor", and `u` stands for "unbound") and  unbound pMHCs contain the suffix `_l_u.pdb` (where `l` stands for "ligand", and `u` stands for "unbound"). Corresponding codes for the unbound TCR and unbound pMHC structures can be found in the table below. 
 
 | Bound Complex | Unbound TCR | Unbound pMHC | MHC Class | IRMSD | F<sub>non-nat</sub> | Difficulty | 
 | ------------- | ----------- | ------------ | --------- | ----- | ------------------- | ---------- |
@@ -55,3 +57,9 @@ Each docking case is named after the PDB code of the raw bound TCR-pMHC structur
 |6CQR  <sup>*</sup> <sup>†</sup> | 6CPH | 6CQJ | II | 0.85 | 0.26 | rigid |
 |6EQB  | 4JFH | 2GUO | I | 1.62 | 0.55 | medium |
 
+<sup>*</sup> TCR docking cases that feature in the TCR3d database
+<sup>†</sup> Cases that differ in I-RSMD score to those in the TCR3d database
+<sup>‡</sup> Cases that differ in docking difficulty category in the TCR3d database
+
+### Notes:
+* A structure for 2NX5_r_u with improved modelling of the missing atoms and residues in one of its CDR3 loops has been uploaded to the `imgt` folder, since the publication of [Peacock and Chain (2021)](https://doi.org/10.3389/fimmu.2021.686127). Minor differences in the IRMSD and F<sub>non-nat</sub> values have been updated accordingly in the table above.
