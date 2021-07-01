@@ -57,9 +57,9 @@ Each docking case is named after the PDB code of the raw bound TCR-pMHC structur
 |6CQR  <sup>*</sup> <sup>†</sup> | 6CPH | 6CQJ | II | 0.85 | 0.26 | rigid |
 |6EQB  | 4JFH | 2GUO | I | 1.62 | 0.55 | medium |
 
-<sup>*</sup> TCR docking cases that feature in the TCR3d database
-<sup>†</sup> Cases that differ in I-RSMD score to those in the TCR3d database
-<sup>‡</sup> Cases that differ in docking difficulty category in the TCR3d database
+<sup>*</sup> TCR docking cases that feature in the TCR3d database <br>
+<sup>†</sup> Cases that differ in I-RSMD score to those in the TCR3d database <br>
+<sup>‡</sup> Cases that differ in docking difficulty category in the TCR3d database <br>
 
 ### Notes:
 * A structure for 2NX5_r_u with improved modelling of the missing atoms and residues in one of its CDR3 loops has been uploaded to the `imgt` folder, since the publication of [Peacock and Chain (2021)](https://doi.org/10.3389/fimmu.2021.686127). Minor differences in the IRMSD and F<sub>non-nat</sub> values have been updated accordingly in the table above.
